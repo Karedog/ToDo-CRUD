@@ -4,7 +4,7 @@ async function createTodo(task,completed) {
     const isCompleted = completed ?? false
     const dataCriacao = new Date()
     try{
-        await todoRepository.createTodo(task, completed,dataCriacao)
+        await todoRepository.createTodo(task, isCompleted ,dataCriacao)
         return {message: "ToDo create is successful"}
     }catch(erro){
         console.log(erro)
